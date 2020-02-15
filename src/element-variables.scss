@@ -9,3 +9,9 @@ $--color-primary: teal;
 $--font-path: '~element-ui/lib/theme-chalk/fonts';
 
 @import "~element-ui/packages/theme-chalk/src/index";
+.el-menu--horizontal > .el-submenu .el-submenu__title:hover{
+  color: #1868c9 !important;
+}
+.el-menu--horizontal > .el-menu-item:hover{
+  color: #1868c9 !important;
+}

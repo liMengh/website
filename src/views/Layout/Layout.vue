@@ -1,53 +1,54 @@
 <template>
     <div class="layout">
-        <NavBar></NavBar>
+        <NavBar/>
+        <Banner/>
+        <TabControl/>
     </div>
 </template>
 
 <script>
     import NavBar from '../NavBar/NavBar'
+    import Banner from '../Banner/Banner'
+    import TabControl from '../TabControl/TabControl'
 
     export default {
         name: "Layout",
         components: {
-            NavBar
+            NavBar,
+            Banner,
+            TabControl
         }
     }
 </script>
 
 <style lang="scss">
-    .layout{
+    .layout {
         width: 100%;
         height: 100%;
     }
-    @media screen and (min-width: 1200px){
-        .navBar{
-            .container {
-                width: 1170px;
-            }
-        }
-    }
-    @media screen and (min-width: 992px){
-        .navBar {
-            .container {
-                width: 970px;
-            }
-        }
-    }
-    @media screen and (min-width: 768px){
-        .navBar {
-            .container {
-                width: 750px;
-            }
-        }
-    }
-    @media screen and (min-width: 480px){
-        .navBar {
-            .container {
-                width: 606px;
-            }
+
+    @media (min-width: 480px) {
+        .container {
+            width: 606px;
         }
     }
 
+    @media (min-width: 768px) {
+        .container {
+            width: 750px;
+        }
+    }
+
+    @media (min-width: 992px) {
+        .container {
+            width: 970px;
+        }
+    }
+
+    @media (min-width: 1200px) {
+        .container {
+            width: 1170px;
+        }
+    }
 </style>
 

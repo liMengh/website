@@ -1,53 +1,39 @@
 <template>
-    <div class="navBar">
+    <div class="nav-bar">
         <div class="container">
-            <h1>软件信息企业响应式网站模板</h1>
             <div>
-                <ul></ul>
+                <h1 style="display: none">软件信息企业响应式网站模板</h1>
+                <img src="./images/logo.png" />
             </div>
+            <el-menu :default-active="activeIndex"
+                     class="nav-bar-menu"
+                     mode="horizontal"
+                     text-color="#000"
+                     active-text-color="#1868c9"
+                     @select="handleSelect">
+                <el-menu-item index="1">网站首页</el-menu-item>
+                <el-submenu index="2">
+                    <template slot="title">关于我们</template>
+                    <el-menu-item index="2-1">荣誉奖项</el-menu-item>
+                    <el-menu-item index="2-2">联系我们</el-menu-item>
+                    <el-menu-item index="2-3">加入我们</el-menu-item>
+                </el-submenu>
+                <el-submenu index="3">
+                    <template slot="title">服务内容</template>
+                    <el-menu-item index="3-1">智慧医院</el-menu-item>
+                    <el-menu-item index="3-2">区域医疗</el-menu-item>
+                    <el-menu-item index="3-3">分级诊疗</el-menu-item>
+                </el-submenu>
+                <el-submenu index="4">
+                    <template slot="title">软件产品</template>
+                    <el-menu-item index="4-1">集团型</el-menu-item>
+                    <el-menu-item index="4-2">连锁软件系列</el-menu-item>
+                    <el-menu-item index="4-3">移动POS</el-menu-item>
+                </el-submenu>
+                <el-menu-item index="5">新闻动态</el-menu-item>
+                <el-menu-item index="6">服务案例</el-menu-item>
+            </el-menu>
         </div>
-        <el-menu :default-active="activeIndex" class="el-menu-demo" mode="horizontal" @select="handleSelect">
-            <el-menu-item index="1">处理中心</el-menu-item>
-            <el-submenu index="2">
-                <template slot="title">我的工作台</template>
-                <el-menu-item index="2-1">选项1</el-menu-item>
-                <el-menu-item index="2-2">选项2</el-menu-item>
-                <el-menu-item index="2-3">选项3</el-menu-item>
-                <el-submenu index="2-4">
-                    <template slot="title">选项4</template>
-                    <el-menu-item index="2-4-1">选项1</el-menu-item>
-                    <el-menu-item index="2-4-2">选项2</el-menu-item>
-                    <el-menu-item index="2-4-3">选项3</el-menu-item>
-                </el-submenu>
-            </el-submenu>
-            <el-menu-item index="3" disabled>消息中心</el-menu-item>
-            <el-menu-item index="4"><a href="https://www.ele.me" target="_blank">订单管理</a></el-menu-item>
-        </el-menu>
-        <div class="line"></div>
-        <el-menu
-                :default-active="activeIndex2"
-                class="el-menu-demo"
-                mode="horizontal"
-                @select="handleSelect"
-                background-color="#545c64"
-                text-color="#fff"
-                active-text-color="#ffd04b">
-            <el-menu-item index="1">处理中心</el-menu-item>
-            <el-submenu index="2">
-                <template slot="title">我的工作台</template>
-                <el-menu-item index="2-1">选项1</el-menu-item>
-                <el-menu-item index="2-2">选项2</el-menu-item>
-                <el-menu-item index="2-3">选项3</el-menu-item>
-                <el-submenu index="2-4">
-                    <template slot="title">选项4</template>
-                    <el-menu-item index="2-4-1">选项1</el-menu-item>
-                    <el-menu-item index="2-4-2">选项2</el-menu-item>
-                    <el-menu-item index="2-4-3">选项3</el-menu-item>
-                </el-submenu>
-            </el-submenu>
-            <el-menu-item index="3" disabled>消息中心</el-menu-item>
-            <el-menu-item index="4"><a href="https://www.ele.me" target="_blank">订单管理</a></el-menu-item>
-        </el-menu>
     </div>
 </template>
 
@@ -57,7 +43,6 @@
         data() {
             return {
                 activeIndex: '1',
-                activeIndex2: '1'
             };
         },
         methods: {
@@ -69,5 +54,18 @@
 </script>
 
 <style lang="scss">
-
+    .nav-bar{
+        width: 100%;
+        height: 60px;
+        display: flex;
+        justify-content: center;
+        background-color: #ffffff;
+        position: fixed;
+        z-index: 999;
+        .container{
+            display: flex;
+            justify-content: space-between;
+            background-color: #ffffff;
+        }
+    }
 </style>
