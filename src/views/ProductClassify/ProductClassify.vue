@@ -289,9 +289,10 @@
                 })
                 productBlocksSelectItem.pitchOn = true
                 if (productBlocksSelectItem.type === 'list'){
-                    return this.productBlocksSelectDesResult = this.productBlocksSelectDes
+                    this.productBlocksSelectDesResult = this.productBlocksSelectDes
+                }else {
+                    this.productBlocksSelectDesResult = this.productBlocksSelectDes.filter(item =>item.type === productBlocksSelectItem.type)
                 }
-                this.productBlocksSelectDesResult = this.productBlocksSelectDes.filter(item =>item.type === productBlocksSelectItem.type)
                 this.calculateStyle()
             },
             productSelectItem(productBlocksSelectDesItem){
