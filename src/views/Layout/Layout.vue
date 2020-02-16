@@ -3,6 +3,7 @@
         <NavBar/>
         <Banner/>
         <TabControl/>
+        <ProductClassify/>
     </div>
 </template>
 
@@ -10,13 +11,15 @@
     import NavBar from '../NavBar/NavBar'
     import Banner from '../Banner/Banner'
     import TabControl from '../TabControl/TabControl'
+    import ProductClassify from '../ProductClassify/ProductClassify'
 
     export default {
         name: "Layout",
         components: {
             NavBar,
             Banner,
-            TabControl
+            TabControl,
+            ProductClassify
         }
     }
 </script>
@@ -26,7 +29,9 @@
         width: 100%;
         height: 100%;
     }
-
+    .container {
+        position: relative;
+    }
     @media (min-width: 480px) {
         .container {
             width: 606px;
@@ -37,11 +42,17 @@
         .container {
             width: 750px;
         }
+        .countup-block-item{
+            width: 50%;
+        }
     }
 
     @media (min-width: 992px) {
         .container {
             width: 970px;
+        }
+        .countup-block-item{
+            width: 25%;
         }
     }
 
